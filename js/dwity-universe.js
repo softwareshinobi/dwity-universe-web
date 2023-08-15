@@ -1,10 +1,13 @@
 $(document).ready(function () {
 
     updateDivAreaWithText("Be Great");
+	
     executeContentUpdate();
 
     window.setInterval(function () {
+		
         executeContentUpdate();
+		
     }, 30 * 1000);
 
 });
@@ -29,7 +32,7 @@ function updateDivAreaFromRestCall() {
 
     $.ajax({
         type: "GET",
-        url: "http://dwity.softwareshinobi.com:8288/software-shinobi/dwity",
+        url: "http://desktop.softwareshinobi.online:8080/dwity/latest-known-event",
         //#dataType: "json",
 
         success: function (data) {
