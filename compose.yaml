@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+
+    dwity-universe-web:
+        
+        build: 
+
+            context: .
+
+            dockerfile: Dockerfile
+
+        container_name: dwity-universe-web
+
+        image: dwity-universe-web
+
+        ports:
+
+            - "5555:80"
