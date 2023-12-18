@@ -8,7 +8,7 @@ $(document).ready(function () {
 		
         executeContentUpdate();
 		
-    }, 30 * 1000);
+    }, 2 * 1000);
 
 });
 
@@ -32,7 +32,7 @@ function updateDivAreaFromRestCall() {
 
     $.ajax({
         type: "GET",
-        url: "http://desktop.softwareshinobi.online:8080/dwity/latest-known-event",
+        url: "http://localhost:8888/dwity-universe/active",
         //#dataType: "json",
 
         success: function (data) {
