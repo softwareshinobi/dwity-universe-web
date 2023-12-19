@@ -45,11 +45,15 @@ function updateDivAreaFromRestCall() {
 
             console.debug(data);
 
+            updateDivAreaWithText("nothing scheduled. be great");           
+
             updateDivAreaWithText(data[0].summary.value);
 
         },
 
         error: function (data) {
+
+            updateDivAreaWithText("there was an error / " + data);           
 
             console.error("error occured loading rest data");
 
