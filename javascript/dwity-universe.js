@@ -35,7 +35,7 @@ function updateDivAreaFromRestCall() {
 
         type: "GET",
 
-        url: "http://localhost:8888/dwity-universe/active",
+        url: "http://192.168.1.3:8888/dwity-universe/active",
 
         //#dataType: "json",
 

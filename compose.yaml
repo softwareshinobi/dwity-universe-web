@@ -12,7 +12,7 @@ services:
 
         container_name: dwity-universe-web
 
-        image: dwity-universe-web
+        image: softwareshinobi/dwity-universe-web
 
         ports:
 

@@ -1,17 +1,23 @@
-###
-### Software Shinobi Cloud Server Controller (Web)
-###
+##
+## dwity universe web / front end
+##
 
 FROM nginx:latest
 
-MAINTAINER Software Shinobi "troy@softwareshinobi.com”
+WORKDIR /usr/share/nginx/html/
+
+MAINTAINER Software Shinobi "the.software.shinobi@gmail.com"
 
 USER root
 
-RUN rm -frv /usr/share/nginx/html/*
+#RUN rm -frv /usr/share/nginx/html/*
 
-RUN ls /usr/share/nginx/html/
+##RUN ls /usr/share/nginx/html/
 
-COPY . /usr/share/nginx/html/
+COPY . .
 
-RUN find /usr/share/nginx/html/
+## COPY . /usr/share/nginx/html/
+
+##RUN find /usr/share/nginx/html/
+
+## RUN find
