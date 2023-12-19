@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    updateDivAreaWithText("Be Great");
+    updateDivAreaWithText("");
 	
     executeContentUpdate();
 
@@ -8,7 +8,7 @@ $(document).ready(function () {
 		
         executeContentUpdate();
 		
-    }, 2 * 1000);
+    }, 8 * 1000);
 
 });
 
@@ -28,29 +28,39 @@ function executeContentUpdate() {
 }
 
 function updateDivAreaFromRestCall() {
+
     console.debug("enter :: updateDivAreaFromRestCall()");
 
     $.ajax({
+
         type: "GET",
+
         url: "http://localhost:8888/dwity-universe/active",
+
         //#dataType: "json",
 
         success: function (data) {
 
             console.debug("Rest service data: ");
+
             console.debug(data);
 
-            updateDivAreaWithText(data);
+            updateDivAreaWithText(data[0].summary.value);
 
         },
+
         error: function (data) {
 
             console.error("error occured loading rest data");
+
             console.error("data: ");
+
             console.error(data);
 
         }
+
     }
+
     );
 
     console.debug("exit :: updateDivAreaFromRestCall()");
